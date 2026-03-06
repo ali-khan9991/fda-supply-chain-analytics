@@ -8,3 +8,14 @@ wheels/
 
 # Virtual environments
 .venv
+.env
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Raw data - too large for git
+data/raw/
+
+# OS files
+.DS_Store
+Thumbs.db
