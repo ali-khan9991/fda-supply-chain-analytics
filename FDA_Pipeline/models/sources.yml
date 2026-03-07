@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: bronze
+    database: pharma_db
+    schema: bronze
+    tables:
+      - name: raw_fda_shortages
+      - name: raw_fda_recalls
+      - name: raw_fda_approvals
