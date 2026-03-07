@@ -33,7 +33,6 @@ models:
   fda_pipeline:
     staging:
       +materialized: table
-      +schema: silver
     gold:
       +materialized: table
       +schema: gold
