@@ -123,6 +123,13 @@ def load_to_bronze(bronze_df):
 
     logger.info(f"Loaded {len(bronze_df)} records into bronze.raw_fda_shortages")
 
+def fda_shortages():
+    logger.info("Starting FDA shortages ingestion...")
+    results = fetch_all_shortages()
+    bronze_df = build_bronze_df(results)
+    load_to_bronze(bronze_df)
+    logger.info("Done.")
+
 # ── main ──────────────────────────────────────────
 if __name__ == "__main__":
     logger.info("Starting FDA shortages ingestion...")

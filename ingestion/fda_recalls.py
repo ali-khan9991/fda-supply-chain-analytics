@@ -160,6 +160,13 @@ def load_to_bronze(bronze_df):
 
     logger.info(f"Loaded {len(bronze_df)} records into bronze.raw_fda_recalls")
 
+def fda_recalls():
+    logger.info("Starting FDA recalls ingestion...")
+    results = fetch_all_recalls()
+    bronze_df = build_bronze_df(results)
+    load_to_bronze(bronze_df)
+    logger.info("Done.")
+
 # ── main ──────────────────────────────────────────
 if __name__ == "__main__":
     logger.info("Starting FDA recalls ingestion...")

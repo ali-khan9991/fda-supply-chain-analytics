@@ -177,6 +177,13 @@ def load_to_bronze(bronze_df):
 
     logger.info(f"Loaded {len(bronze_df)} records into bronze.raw_fda_approvals")
 
+def fda_approvals():
+    logger.info("Starting FDA approvals ingestion...")
+    results = fetch_all_approvals()
+    bronze_df = build_bronze_df(results)
+    load_to_bronze(bronze_df)
+    logger.info("Done.")
+
 # ── load ──────────────────────────────────────────
 if __name__ == "__main__":
     logger.info("Starting FDA approvals ingestion...")
