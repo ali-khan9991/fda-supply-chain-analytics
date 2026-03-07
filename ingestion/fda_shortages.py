@@ -41,7 +41,7 @@ DB_URL = (
     f"postgresql://{os.getenv('DB_USER')}:{os.getenv('DB_PASSWORD')}"
     f"@{os.getenv('DB_HOST')}:{os.getenv('DB_PORT')}/{os.getenv('DB_NAME')}"
 )
-
+#() is for multi-line string concatenation, not for function calls. The original code had an extra set of parentheses around the f-string which is unnecessary and can be removed for clarity.
 BRONZE_COLUMNS = [
     "package_ndc", "generic_name", "company_name", "dosage_form",
     "presentation", "status", "availability", "update_type",
