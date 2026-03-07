@@ -1,0 +1,5 @@
+2026-03-06 22:59:06 - INFO - Starting FDA approvals ingestion...
+2026-03-06 22:59:07 - ERROR - Failed to get total: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=1
+2026-03-06 22:59:07 - INFO - Built bronze_df with shape: (0, 1)
+2026-03-06 22:59:07 - INFO - Loaded 0 records into bronze.raw_fda_approvals
+2026-03-06 22:59:07 - INFO - Done.

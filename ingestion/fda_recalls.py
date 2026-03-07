@@ -16,7 +16,7 @@ BASE_DIR = Path(__file__).parent.parent
 LOG_DIR = BASE_DIR / "logs"
 LOG_DIR.mkdir(exist_ok=True)
 
-log_filename = LOG_DIR / f"fda_recalls_{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.log"
+log_filename = LOG_DIR / f"fda_recalls_{datetime.now().strftime('%Y-%m-%d')}.log"
 
 formatter = logging.Formatter(
     fmt="{asctime} - {levelname} - {message}",
@@ -84,7 +84,7 @@ def get_total_records():
     try:
         response = requests.get(
             f"{BASE_URL}/enforcement.json",
-            params={"limit": 1},
+            params={"limit": 1, "api_key": os.getenv("FDA_API_KEY")},
             timeout=10
         )
         response.raise_for_status() # if there is an HTTP error, this will raise an exception which we can catch and log
@@ -99,7 +99,7 @@ def fetch_page(skip):
     try:
         response = requests.get(
             f"{BASE_URL}/enforcement.json",
-            params={"limit": 100, "skip": skip},
+            params={"limit": 100, "skip": skip, "api_key": os.getenv("FDA_API_KEY")},
             timeout=10
         )
         response.raise_for_status()

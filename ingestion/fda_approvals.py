@@ -8,6 +8,7 @@ from datetime import datetime
 from pathlib import Path
 from sqlalchemy import create_engine
 from dotenv import load_dotenv
+import time
 
 load_dotenv()
 
@@ -16,7 +17,7 @@ BASE_DIR = Path(__file__).parent.parent
 LOG_DIR = BASE_DIR / "logs"
 LOG_DIR.mkdir(exist_ok=True)
 
-log_filename = LOG_DIR / f"fda_approvals_{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.log"
+log_filename = LOG_DIR / f"fda_approvals_{datetime.now().strftime('%Y-%m-%d')}.log"
 
 formatter = logging.Formatter(
     fmt="{asctime} - {levelname} - {message}",
@@ -67,38 +68,64 @@ LIST_COLS = [
 
 # ── extract ──────────────────────────────────────────
 def get_total_records():
-    try:
-        response = requests.get(
-            f"{BASE_URL}/drugsfda.json",
-            params={"limit": 1},
-            timeout=10
-        )
-        response.raise_for_status()# if there is an HTTP error, this will raise an exception which we can catch and log
-        total = response.json()["meta"]["results"]["total"]
-        logger.info(f"Total records to fetch: {total}")
-        return total
-    except Exception as e:
-        logger.error(f"Failed to get total: {type(e).__name__} - {e}") # type is used to log the type of exception that occurred, which can be helpful for debugging and understanding the nature of the error.
-        return 0
+    max_retries = 3
+    for attempt in range(max_retries):
+        try:
+            response = requests.get(
+                f"{BASE_URL}/drugsfda.json",
+                params={"limit": 1, "api_key": os.getenv("FDA_API_KEY")},
+                timeout=10
+            )
+            if response.status_code==429:
+                wait = 2 * (attempt + 1)
+                logger.warning(f"Rate limited when getting total. Waiting {wait}s...")
+                time.sleep(wait)
+                continue
+            response.raise_for_status()# if there is an HTTP error, this will raise an exception which we can catch and log
+            total = response.json()["meta"]["results"]["total"]
+            logger.info(f"Total records to fetch: {total}")
+            return total
+        except Exception as e:
+            logger.error(f"Failed to get total: {type(e).__name__} - {e}") # type is used to log the type of exception that occurred, which can be helpful for debugging and understanding the nature of the error.
+    return 0
+
 
 def fetch_page(skip):
-    try:
-        response = requests.get(
-            f"{BASE_URL}/drugsfda.json",
-            params={"limit": 100, "skip": skip},
-            timeout=10
-        )
-        # skip is used for pagination, allowing us to fetch records in batches of 100 until we have retrieved all records. This helps manage memory usage and can improve performance when dealing with large datasets.
-        # limit is set to 100 to fetch a reasonable number of records per request, which can help avoid timeouts and reduce the load on the server while still making efficient use of network resources.
-        response.raise_for_status() # if there is an HTTP error, this will raise an exception which we can catch and log
-        # response gives the status code of the HTTP response. If the status code indicates an error (e.g., 4xx or 5xx), raise_for_status() will raise an HTTPError exception, which we can catch and log to understand what went wrong with the request.
-        results = response.json()["results"]
-        # json() is used to parse the JSON response from the API into a Python dictionary. We then access the "results" key to get the list of records returned by the API for that page.
-        logger.info(f"Fetched page at skip={skip} — {len(results)} records")
-        return results
-    except Exception as e:
-        logger.error(f"Error at skip={skip}: {type(e).__name__} - {e}")
-        return []
+    max_retries = 3
+    wait_seconds = 2
+    time.sleep(0.5)  # small delay to avoid hitting rate limits too quickly
+
+    for attempt in range(max_retries):
+        try:
+            response = requests.get(
+                f"{BASE_URL}/drugsfda.json",
+                params={"limit": 100, "skip": skip, "api_key": os.getenv("FDA_API_KEY")},
+                timeout=10
+            )
+
+            # if rate limited — wait and retry
+            if response.status_code == 429:
+                wait = wait_seconds * (attempt + 1)
+                logger.warning(f"Rate limited at skip={skip}. Waiting {wait}s...")
+                time.sleep(wait)
+                continue # retry the request after waiting
+            # skip is used for pagination, allowing us to fetch records in batches of 100 until we have retrieved all records. This helps manage memory usage and can improve performance when dealing with large datasets.
+            # limit is set to 100 to fetch a reasonable number of records per request, which can help avoid timeouts and reduce the load on the server while still making efficient use of network resources.
+            response.raise_for_status() # if there is an HTTP error, this will raise an exception which we can catch and log
+            # response gives the status code of the HTTP response. If the status code indicates an error (e.g., 4xx or 5xx), raise_for_status() will raise an HTTPError exception, which we can catch and log to understand what went wrong with the request.
+            results = response.json()["results"]
+            # json() is used to parse the JSON response from the API into a Python dictionary. We then access the "results" key to get the list of records returned by the API for that page.
+            logger.info(f"Fetched page at skip={skip} — {len(results)} records")
+            return results # break out of retry loop if successful
+
+        except Exception as e:
+            logger.error(f"Error at skip={skip}: {type(e).__name__} - {e}")
+            time.sleep(wait_seconds)
+
+    logger.error(f"Failed after {max_retries} attempts at skip={skip}")
+    return []
+
+
 
 def fetch_all_approvals():
     total = get_total_records()
