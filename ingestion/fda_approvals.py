@@ -16,7 +16,7 @@ BASE_DIR = Path(__file__).parent.parent
 LOG_DIR = BASE_DIR / "logs"
 LOG_DIR.mkdir(exist_ok=True)
 
-log_filename = LOG_DIR / f"fda_recalls_{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.log"
+log_filename = LOG_DIR / f"fda_approvals_{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.log"
 
 formatter = logging.Formatter(
     fmt="{asctime} - {levelname} - {message}",
@@ -44,30 +44,15 @@ DB_URL = (
 )
 
 BRONZE_COLUMNS = [
-    "recall_number",
-    "recalling_firm",
-    "product_description",
-    "reason_for_recall",
-    "classification",
-    "status",
-    "voluntary_mandated",
-    "initial_firm_notification",
-    "distribution_pattern",
-    "recall_initiation_date",
-    "center_classification_date",
-    "termination_date",
-    "report_date",
-    "product_quantity",
-    "city",
-    "state",
-    "country",
-    "code_info",
+    "application_number",
+    "sponsor_name",
     "openfda.brand_name",
     "openfda.generic_name",
     "openfda.manufacturer_name",
     "openfda.substance_name",
-    "openfda.application_number",
     "openfda.product_ndc",
+    "openfda.route",
+    "openfda.product_type",
 ]
 
 LIST_COLS = [
@@ -75,19 +60,20 @@ LIST_COLS = [
     "openfda.generic_name",
     "openfda.manufacturer_name",
     "openfda.substance_name",
-    "openfda.application_number",
     "openfda.product_ndc",
+    "openfda.route",
+    "openfda.product_type",
 ]
 
 # ── extract ──────────────────────────────────────────
 def get_total_records():
     try:
         response = requests.get(
-            f"{BASE_URL}/enforcement.json",
+            f"{BASE_URL}/drugsfda.json",
             params={"limit": 1},
             timeout=10
         )
-        response.raise_for_status() # if there is an HTTP error, this will raise an exception which we can catch and log
+        response.raise_for_status()# if there is an HTTP error, this will raise an exception which we can catch and log
         total = response.json()["meta"]["results"]["total"]
         logger.info(f"Total records to fetch: {total}")
         return total
@@ -98,19 +84,23 @@ def get_total_records():
 def fetch_page(skip):
     try:
         response = requests.get(
-            f"{BASE_URL}/enforcement.json",
+            f"{BASE_URL}/drugsfda.json",
             params={"limit": 100, "skip": skip},
             timeout=10
         )
-        response.raise_for_status()
+        # skip is used for pagination, allowing us to fetch records in batches of 100 until we have retrieved all records. This helps manage memory usage and can improve performance when dealing with large datasets.
+        # limit is set to 100 to fetch a reasonable number of records per request, which can help avoid timeouts and reduce the load on the server while still making efficient use of network resources.
+        response.raise_for_status() # if there is an HTTP error, this will raise an exception which we can catch and log
+        # response gives the status code of the HTTP response. If the status code indicates an error (e.g., 4xx or 5xx), raise_for_status() will raise an HTTPError exception, which we can catch and log to understand what went wrong with the request.
         results = response.json()["results"]
+        # json() is used to parse the JSON response from the API into a Python dictionary. We then access the "results" key to get the list of records returned by the API for that page.
         logger.info(f"Fetched page at skip={skip} — {len(results)} records")
         return results
     except Exception as e:
         logger.error(f"Error at skip={skip}: {type(e).__name__} - {e}")
         return []
 
-def fetch_all_recalls():
+def fetch_all_approvals():
     total = get_total_records()
     if total == 0:
         return []
@@ -141,7 +131,7 @@ def build_bronze_df(results):
             )
 
     bronze_df["ingested_at"] = pd.Timestamp.now()
-    bronze_df = bronze_df.drop_duplicates(subset=["recall_number"])
+    bronze_df = bronze_df.drop_duplicates(subset=["application_number"])
 
     logger.info(f"Built bronze_df with shape: {bronze_df.shape}")
     return bronze_df
@@ -151,19 +141,19 @@ def load_to_bronze(bronze_df):
     engine = create_engine(DB_URL)
 
     bronze_df.to_sql(
-        name="raw_fda_recalls",
+        name="raw_fda_approvals",
         schema="bronze",
         con=engine,
         if_exists="replace",
         index=False
     )
 
-    logger.info(f"Loaded {len(bronze_df)} records into bronze.raw_fda_recalls")
+    logger.info(f"Loaded {len(bronze_df)} records into bronze.raw_fda_approvals")
 
-# ── main ──────────────────────────────────────────
+# ── load ──────────────────────────────────────────
 if __name__ == "__main__":
-    logger.info("Starting FDA recalls ingestion...")
-    results = fetch_all_recalls()
+    logger.info("Starting FDA approvals ingestion...")
+    results = fetch_all_approvals()
     bronze_df = build_bronze_df(results)
     load_to_bronze(bronze_df)
     logger.info("Done.")
