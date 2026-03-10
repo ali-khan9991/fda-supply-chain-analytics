@@ -147,3 +147,18 @@ Runtime Error
 [0m13:32:41.179766 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029E3FF5EA20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029E3FF5E7B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029E3FF5E540>]}
 [0m13:32:41.179766 [debug] [MainThread]: Flushing usage events
 [0m13:32:41.660203 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:09:39.319795 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C723177B30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C723177F20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C723177E30>]}
+
+
+============================== 17:09:39.324089 | b4d17045-4b6a-4d2e-9b9d-258e13758f90 ==============================
+[0m17:09:39.324089 [info ] [MainThread]: Running with dbt=1.11.7
+[0m17:09:39.324089 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\abuba\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt run --select mart_alternatives', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m17:09:39.325978 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\abuba\FDA_Project\pharma_supply_chain\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m17:09:39.327002 [debug] [MainThread]: Command `dbt run` failed at 17:09:39.325978 after 0.15 seconds
+[0m17:09:39.327002 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C723177E90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C71EA74AA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C721FDBD10>]}
+[0m17:09:39.327002 [debug] [MainThread]: Flushing usage events
+[0m17:09:39.829962 [debug] [MainThread]: An error was encountered while trying to flush usage events
