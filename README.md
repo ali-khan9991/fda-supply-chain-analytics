@@ -262,6 +262,5 @@ dbt docs generate && dbt docs serve
 
 ## Author
 
-**Ak** — S&OP Planner (Data & Analytics) at KBI Biopharma  
-MS Data Science, Indiana University Bloomington  
+**Ali Khan** 
 [GitHub](https://github.com/ali-khan9991)
