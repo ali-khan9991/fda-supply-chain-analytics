@@ -1,0 +1,22 @@
+2026-03-06 23:10:42 - INFO - Starting FDA shortages ingestion...
+2026-03-06 23:10:43 - INFO - Total records: 1677
+2026-03-06 23:10:43 - INFO - Fetched: 100/1677
+2026-03-06 23:10:44 - INFO - Fetched: 200/1677
+2026-03-06 23:10:45 - INFO - Fetched: 300/1677
+2026-03-06 23:10:45 - INFO - Fetched: 400/1677
+2026-03-06 23:10:46 - INFO - Fetched: 500/1677
+2026-03-06 23:10:47 - INFO - Fetched: 600/1677
+2026-03-06 23:10:48 - INFO - Fetched: 700/1677
+2026-03-06 23:10:49 - INFO - Fetched: 800/1677
+2026-03-06 23:10:50 - INFO - Fetched: 900/1677
+2026-03-06 23:10:50 - INFO - Fetched: 1000/1677
+2026-03-06 23:10:51 - INFO - Fetched: 1100/1677
+2026-03-06 23:10:52 - INFO - Fetched: 1200/1677
+2026-03-06 23:10:53 - INFO - Fetched: 1300/1677
+2026-03-06 23:10:54 - INFO - Fetched: 1400/1677
+2026-03-06 23:10:55 - INFO - Fetched: 1500/1677
+2026-03-06 23:10:55 - INFO - Fetched: 1600/1677
+2026-03-06 23:10:56 - INFO - Fetched: 1677/1677
+2026-03-06 23:10:56 - INFO - Built bronze_df with shape: (1656, 22)
+2026-03-06 23:10:56 - INFO - Loaded 1656 records into bronze.raw_fda_shortages
+2026-03-06 23:10:56 - INFO - Done.

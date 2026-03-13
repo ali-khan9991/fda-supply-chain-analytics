@@ -1,0 +1,295 @@
+2026-03-06 22:45:30 - INFO - Starting FDA approvals ingestion...
+2026-03-06 22:45:31 - INFO - Total records to fetch: 28900
+2026-03-06 22:45:32 - INFO - Fetched page at skip=100 — 100 records
+2026-03-06 22:45:32 - INFO - Fetched page at skip=400 — 100 records
+2026-03-06 22:45:32 - INFO - Fetched page at skip=0 — 100 records
+2026-03-06 22:45:32 - INFO - Fetched page at skip=200 — 100 records
+2026-03-06 22:45:32 - INFO - Fetched page at skip=300 — 100 records
+2026-03-06 22:45:33 - INFO - Fetched page at skip=500 — 100 records
+2026-03-06 22:45:33 - INFO - Fetched page at skip=600 — 100 records
+2026-03-06 22:45:33 - INFO - Fetched page at skip=800 — 100 records
+2026-03-06 22:45:33 - INFO - Fetched page at skip=700 — 100 records
+2026-03-06 22:45:33 - INFO - Fetched page at skip=900 — 100 records
+2026-03-06 22:45:34 - INFO - Fetched page at skip=1000 — 100 records
+2026-03-06 22:45:34 - INFO - Fetched page at skip=1100 — 100 records
+2026-03-06 22:45:34 - INFO - Fetched page at skip=1200 — 100 records
+2026-03-06 22:45:34 - INFO - Fetched page at skip=1400 — 100 records
+2026-03-06 22:45:34 - INFO - Fetched page at skip=1300 — 100 records
+2026-03-06 22:45:35 - INFO - Fetched page at skip=1500 — 100 records
+2026-03-06 22:45:35 - INFO - Fetched page at skip=1600 — 100 records
+2026-03-06 22:45:35 - INFO - Fetched page at skip=1900 — 100 records
+2026-03-06 22:45:35 - INFO - Fetched page at skip=1800 — 100 records
+2026-03-06 22:45:35 - INFO - Fetched page at skip=1700 — 100 records
+2026-03-06 22:45:36 - INFO - Fetched page at skip=2000 — 100 records
+2026-03-06 22:45:36 - INFO - Fetched page at skip=2200 — 100 records
+2026-03-06 22:45:36 - INFO - Fetched page at skip=2100 — 100 records
+2026-03-06 22:45:36 - INFO - Fetched page at skip=2400 — 100 records
+2026-03-06 22:45:36 - INFO - Fetched page at skip=2300 — 100 records
+2026-03-06 22:45:37 - INFO - Fetched page at skip=2500 — 100 records
+2026-03-06 22:45:37 - INFO - Fetched page at skip=2600 — 100 records
+2026-03-06 22:45:37 - INFO - Fetched page at skip=2700 — 100 records
+2026-03-06 22:45:37 - INFO - Fetched page at skip=2800 — 100 records
+2026-03-06 22:45:37 - INFO - Fetched page at skip=2900 — 100 records
+2026-03-06 22:45:38 - INFO - Fetched page at skip=3000 — 100 records
+2026-03-06 22:45:38 - INFO - Fetched page at skip=3100 — 100 records
+2026-03-06 22:45:38 - INFO - Fetched page at skip=3200 — 100 records
+2026-03-06 22:45:38 - INFO - Fetched page at skip=3300 — 100 records
+2026-03-06 22:45:38 - INFO - Fetched page at skip=3400 — 100 records
+2026-03-06 22:45:39 - INFO - Fetched page at skip=3500 — 100 records
+2026-03-06 22:45:39 - INFO - Fetched page at skip=3600 — 100 records
+2026-03-06 22:45:39 - INFO - Fetched page at skip=3700 — 100 records
+2026-03-06 22:45:39 - INFO - Fetched page at skip=3800 — 100 records
+2026-03-06 22:45:39 - INFO - Fetched page at skip=4000 — 100 records
+2026-03-06 22:45:39 - INFO - Fetched page at skip=3900 — 100 records
+2026-03-06 22:45:40 - INFO - Fetched page at skip=4100 — 100 records
+2026-03-06 22:45:40 - INFO - Fetched page at skip=4200 — 100 records
+2026-03-06 22:45:40 - INFO - Fetched page at skip=4300 — 100 records
+2026-03-06 22:45:40 - INFO - Fetched page at skip=4500 — 100 records
+2026-03-06 22:45:40 - INFO - Fetched page at skip=4400 — 100 records
+2026-03-06 22:45:40 - INFO - Fetched page at skip=4600 — 100 records
+2026-03-06 22:45:41 - INFO - Fetched page at skip=4700 — 100 records
+2026-03-06 22:45:41 - INFO - Fetched page at skip=4800 — 100 records
+2026-03-06 22:45:41 - INFO - Fetched page at skip=5000 — 100 records
+2026-03-06 22:45:41 - INFO - Fetched page at skip=4900 — 100 records
+2026-03-06 22:45:41 - INFO - Fetched page at skip=5100 — 100 records
+2026-03-06 22:45:42 - INFO - Fetched page at skip=5200 — 100 records
+2026-03-06 22:45:42 - INFO - Fetched page at skip=5300 — 100 records
+2026-03-06 22:45:42 - INFO - Fetched page at skip=5400 — 100 records
+2026-03-06 22:45:42 - INFO - Fetched page at skip=5500 — 100 records
+2026-03-06 22:45:42 - INFO - Fetched page at skip=5600 — 100 records
+2026-03-06 22:45:42 - INFO - Fetched page at skip=5700 — 100 records
+2026-03-06 22:45:43 - INFO - Fetched page at skip=5800 — 100 records
+2026-03-06 22:45:43 - INFO - Fetched page at skip=5900 — 100 records
+2026-03-06 22:45:43 - INFO - Fetched page at skip=6100 — 100 records
+2026-03-06 22:45:43 - INFO - Fetched page at skip=6000 — 100 records
+2026-03-06 22:45:43 - INFO - Fetched page at skip=6200 — 100 records
+2026-03-06 22:45:44 - INFO - Fetched page at skip=6300 — 100 records
+2026-03-06 22:45:44 - INFO - Fetched page at skip=6500 — 100 records
+2026-03-06 22:45:44 - INFO - Fetched page at skip=6400 — 100 records
+2026-03-06 22:45:44 - INFO - Fetched page at skip=6600 — 100 records
+2026-03-06 22:45:44 - INFO - Fetched page at skip=6700 — 100 records
+2026-03-06 22:45:44 - INFO - Fetched page at skip=6800 — 100 records
+2026-03-06 22:45:45 - INFO - Fetched page at skip=6900 — 100 records
+2026-03-06 22:45:45 - INFO - Fetched page at skip=7000 — 100 records
+2026-03-06 22:45:45 - INFO - Fetched page at skip=7100 — 100 records
+2026-03-06 22:45:45 - INFO - Fetched page at skip=7200 — 100 records
+2026-03-06 22:45:45 - INFO - Fetched page at skip=7300 — 100 records
+2026-03-06 22:45:46 - INFO - Fetched page at skip=7400 — 100 records
+2026-03-06 22:45:46 - INFO - Fetched page at skip=7500 — 100 records
+2026-03-06 22:45:46 - INFO - Fetched page at skip=7600 — 100 records
+2026-03-06 22:45:46 - INFO - Fetched page at skip=7700 — 100 records
+2026-03-06 22:45:46 - INFO - Fetched page at skip=7800 — 100 records
+2026-03-06 22:45:47 - INFO - Fetched page at skip=7900 — 100 records
+2026-03-06 22:45:47 - INFO - Fetched page at skip=8000 — 100 records
+2026-03-06 22:45:47 - INFO - Fetched page at skip=8100 — 100 records
+2026-03-06 22:45:47 - INFO - Fetched page at skip=8200 — 100 records
+2026-03-06 22:45:47 - INFO - Fetched page at skip=8300 — 100 records
+2026-03-06 22:45:47 - INFO - Fetched page at skip=8400 — 100 records
+2026-03-06 22:45:48 - INFO - Fetched page at skip=8500 — 100 records
+2026-03-06 22:45:48 - INFO - Fetched page at skip=8600 — 100 records
+2026-03-06 22:45:48 - INFO - Fetched page at skip=8800 — 100 records
+2026-03-06 22:45:48 - INFO - Fetched page at skip=8700 — 100 records
+2026-03-06 22:45:48 - INFO - Fetched page at skip=8900 — 100 records
+2026-03-06 22:45:49 - INFO - Fetched page at skip=9100 — 100 records
+2026-03-06 22:45:49 - INFO - Fetched page at skip=9000 — 100 records
+2026-03-06 22:45:49 - INFO - Fetched page at skip=9200 — 100 records
+2026-03-06 22:45:49 - INFO - Fetched page at skip=9300 — 100 records
+2026-03-06 22:45:49 - INFO - Fetched page at skip=9400 — 100 records
+2026-03-06 22:45:50 - INFO - Fetched page at skip=9500 — 100 records
+2026-03-06 22:45:50 - INFO - Fetched page at skip=9600 — 100 records
+2026-03-06 22:45:50 - INFO - Fetched page at skip=9700 — 100 records
+2026-03-06 22:45:50 - INFO - Fetched page at skip=9800 — 100 records
+2026-03-06 22:45:50 - INFO - Fetched page at skip=9900 — 100 records
+2026-03-06 22:45:50 - INFO - Fetched page at skip=10100 — 100 records
+2026-03-06 22:45:50 - INFO - Fetched page at skip=10000 — 100 records
+2026-03-06 22:45:51 - INFO - Fetched page at skip=10200 — 100 records
+2026-03-06 22:45:51 - INFO - Fetched page at skip=10300 — 100 records
+2026-03-06 22:45:51 - INFO - Fetched page at skip=10400 — 100 records
+2026-03-06 22:45:51 - INFO - Fetched page at skip=10500 — 100 records
+2026-03-06 22:45:51 - INFO - Fetched page at skip=10600 — 100 records
+2026-03-06 22:45:51 - INFO - Fetched page at skip=10700 — 100 records
+2026-03-06 22:45:52 - INFO - Fetched page at skip=10800 — 100 records
+2026-03-06 22:45:52 - INFO - Fetched page at skip=10900 — 100 records
+2026-03-06 22:45:52 - INFO - Fetched page at skip=11000 — 100 records
+2026-03-06 22:45:52 - INFO - Fetched page at skip=11100 — 100 records
+2026-03-06 22:45:52 - INFO - Fetched page at skip=11200 — 100 records
+2026-03-06 22:45:52 - INFO - Fetched page at skip=11300 — 100 records
+2026-03-06 22:45:52 - INFO - Fetched page at skip=11400 — 100 records
+2026-03-06 22:45:53 - INFO - Fetched page at skip=11500 — 100 records
+2026-03-06 22:45:53 - INFO - Fetched page at skip=11600 — 100 records
+2026-03-06 22:45:53 - INFO - Fetched page at skip=11700 — 100 records
+2026-03-06 22:45:53 - INFO - Fetched page at skip=11900 — 100 records
+2026-03-06 22:45:53 - INFO - Fetched page at skip=11800 — 100 records
+2026-03-06 22:45:54 - INFO - Fetched page at skip=12000 — 100 records
+2026-03-06 22:45:54 - INFO - Fetched page at skip=12100 — 100 records
+2026-03-06 22:45:54 - INFO - Fetched page at skip=12200 — 100 records
+2026-03-06 22:45:54 - INFO - Fetched page at skip=12300 — 100 records
+2026-03-06 22:45:54 - INFO - Fetched page at skip=12400 — 100 records
+2026-03-06 22:45:54 - INFO - Fetched page at skip=12500 — 100 records
+2026-03-06 22:45:55 - INFO - Fetched page at skip=12600 — 100 records
+2026-03-06 22:45:55 - INFO - Fetched page at skip=12700 — 100 records
+2026-03-06 22:45:55 - INFO - Fetched page at skip=12800 — 100 records
+2026-03-06 22:45:55 - INFO - Fetched page at skip=12900 — 100 records
+2026-03-06 22:45:55 - INFO - Fetched page at skip=13000 — 100 records
+2026-03-06 22:45:55 - INFO - Fetched page at skip=13100 — 100 records
+2026-03-06 22:45:56 - INFO - Fetched page at skip=13200 — 100 records
+2026-03-06 22:45:56 - INFO - Fetched page at skip=13400 — 100 records
+2026-03-06 22:45:56 - INFO - Fetched page at skip=13300 — 100 records
+2026-03-06 22:45:56 - INFO - Fetched page at skip=13500 — 100 records
+2026-03-06 22:45:56 - INFO - Fetched page at skip=13600 — 100 records
+2026-03-06 22:45:56 - INFO - Fetched page at skip=13700 — 100 records
+2026-03-06 22:45:57 - INFO - Fetched page at skip=13800 — 100 records
+2026-03-06 22:45:57 - INFO - Fetched page at skip=14000 — 100 records
+2026-03-06 22:45:57 - INFO - Fetched page at skip=13900 — 100 records
+2026-03-06 22:45:57 - INFO - Fetched page at skip=14100 — 100 records
+2026-03-06 22:45:57 - INFO - Fetched page at skip=14200 — 100 records
+2026-03-06 22:45:58 - INFO - Fetched page at skip=14300 — 100 records
+2026-03-06 22:45:58 - INFO - Fetched page at skip=14500 — 100 records
+2026-03-06 22:45:58 - INFO - Fetched page at skip=14400 — 100 records
+2026-03-06 22:45:58 - INFO - Fetched page at skip=14600 — 100 records
+2026-03-06 22:45:58 - INFO - Fetched page at skip=14700 — 100 records
+2026-03-06 22:45:58 - INFO - Fetched page at skip=14800 — 100 records
+2026-03-06 22:45:59 - INFO - Fetched page at skip=14900 — 100 records
+2026-03-06 22:45:59 - INFO - Fetched page at skip=15000 — 100 records
+2026-03-06 22:45:59 - INFO - Fetched page at skip=15100 — 100 records
+2026-03-06 22:45:59 - INFO - Fetched page at skip=15200 — 100 records
+2026-03-06 22:45:59 - INFO - Fetched page at skip=15300 — 100 records
+2026-03-06 22:45:59 - INFO - Fetched page at skip=15400 — 100 records
+2026-03-06 22:45:59 - INFO - Fetched page at skip=15500 — 100 records
+2026-03-06 22:46:00 - INFO - Fetched page at skip=15600 — 100 records
+2026-03-06 22:46:00 - INFO - Fetched page at skip=15700 — 100 records
+2026-03-06 22:46:00 - INFO - Fetched page at skip=15800 — 100 records
+2026-03-06 22:46:00 - INFO - Fetched page at skip=15900 — 100 records
+2026-03-06 22:46:01 - INFO - Fetched page at skip=16000 — 100 records
+2026-03-06 22:46:01 - INFO - Fetched page at skip=16100 — 100 records
+2026-03-06 22:46:01 - INFO - Fetched page at skip=16200 — 100 records
+2026-03-06 22:46:01 - INFO - Fetched page at skip=16300 — 100 records
+2026-03-06 22:46:01 - INFO - Fetched page at skip=16400 — 100 records
+2026-03-06 22:46:01 - INFO - Fetched page at skip=16500 — 100 records
+2026-03-06 22:46:01 - INFO - Fetched page at skip=16700 — 100 records
+2026-03-06 22:46:01 - INFO - Fetched page at skip=16600 — 100 records
+2026-03-06 22:46:02 - INFO - Fetched page at skip=16800 — 100 records
+2026-03-06 22:46:02 - INFO - Fetched page at skip=16900 — 100 records
+2026-03-06 22:46:02 - INFO - Fetched page at skip=17000 — 100 records
+2026-03-06 22:46:02 - INFO - Fetched page at skip=17200 — 100 records
+2026-03-06 22:46:02 - INFO - Fetched page at skip=17100 — 100 records
+2026-03-06 22:46:03 - INFO - Fetched page at skip=17400 — 100 records
+2026-03-06 22:46:03 - INFO - Fetched page at skip=17300 — 100 records
+2026-03-06 22:46:03 - INFO - Fetched page at skip=17500 — 100 records
+2026-03-06 22:46:03 - INFO - Fetched page at skip=17700 — 100 records
+2026-03-06 22:46:03 - INFO - Fetched page at skip=17600 — 100 records
+2026-03-06 22:46:04 - INFO - Fetched page at skip=17900 — 100 records
+2026-03-06 22:46:04 - INFO - Fetched page at skip=17800 — 100 records
+2026-03-06 22:46:04 - INFO - Fetched page at skip=18000 — 100 records
+2026-03-06 22:46:04 - INFO - Fetched page at skip=18100 — 100 records
+2026-03-06 22:46:04 - INFO - Fetched page at skip=18200 — 100 records
+2026-03-06 22:46:04 - INFO - Fetched page at skip=18300 — 100 records
+2026-03-06 22:46:04 - INFO - Fetched page at skip=18400 — 100 records
+2026-03-06 22:46:05 - INFO - Fetched page at skip=18500 — 100 records
+2026-03-06 22:46:05 - INFO - Fetched page at skip=18600 — 100 records
+2026-03-06 22:46:05 - INFO - Fetched page at skip=18700 — 100 records
+2026-03-06 22:46:05 - INFO - Fetched page at skip=18800 — 100 records
+2026-03-06 22:46:05 - INFO - Fetched page at skip=18900 — 100 records
+2026-03-06 22:46:06 - INFO - Fetched page at skip=19000 — 100 records
+2026-03-06 22:46:06 - INFO - Fetched page at skip=19100 — 100 records
+2026-03-06 22:46:06 - INFO - Fetched page at skip=19200 — 100 records
+2026-03-06 22:46:06 - ERROR - Error at skip=19300: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=19300
+2026-03-06 22:46:06 - INFO - Fetched page at skip=19400 — 100 records
+2026-03-06 22:46:06 - ERROR - Error at skip=19500: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=19500
+2026-03-06 22:46:06 - ERROR - Error at skip=19600: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=19600
+2026-03-06 22:46:06 - ERROR - Error at skip=19700: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=19700
+2026-03-06 22:46:07 - ERROR - Error at skip=19800: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=19800
+2026-03-06 22:46:07 - ERROR - Error at skip=19900: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=19900
+2026-03-06 22:46:07 - ERROR - Error at skip=20000: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=20000
+2026-03-06 22:46:07 - ERROR - Error at skip=20100: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=20100
+2026-03-06 22:46:07 - ERROR - Error at skip=20200: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=20200
+2026-03-06 22:46:07 - ERROR - Error at skip=20300: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=20300
+2026-03-06 22:46:07 - ERROR - Error at skip=20400: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=20400
+2026-03-06 22:46:08 - ERROR - Error at skip=20500: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=20500
+2026-03-06 22:46:08 - ERROR - Error at skip=20600: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=20600
+2026-03-06 22:46:08 - ERROR - Error at skip=20700: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=20700
+2026-03-06 22:46:08 - ERROR - Error at skip=20800: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=20800
+2026-03-06 22:46:08 - ERROR - Error at skip=20900: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=20900
+2026-03-06 22:46:08 - ERROR - Error at skip=21000: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=21000
+2026-03-06 22:46:08 - ERROR - Error at skip=21100: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=21100
+2026-03-06 22:46:08 - ERROR - Error at skip=21200: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=21200
+2026-03-06 22:46:09 - ERROR - Error at skip=21300: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=21300
+2026-03-06 22:46:09 - ERROR - Error at skip=21400: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=21400
+2026-03-06 22:46:09 - ERROR - Error at skip=21500: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=21500
+2026-03-06 22:46:09 - ERROR - Error at skip=21600: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=21600
+2026-03-06 22:46:09 - ERROR - Error at skip=21800: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=21800
+2026-03-06 22:46:09 - ERROR - Error at skip=21700: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=21700
+2026-03-06 22:46:09 - ERROR - Error at skip=21900: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=21900
+2026-03-06 22:46:09 - ERROR - Error at skip=22000: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=22000
+2026-03-06 22:46:10 - ERROR - Error at skip=22100: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=22100
+2026-03-06 22:46:10 - ERROR - Error at skip=22200: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=22200
+2026-03-06 22:46:10 - ERROR - Error at skip=22300: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=22300
+2026-03-06 22:46:10 - ERROR - Error at skip=22400: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=22400
+2026-03-06 22:46:10 - ERROR - Error at skip=22500: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=22500
+2026-03-06 22:46:10 - ERROR - Error at skip=22600: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=22600
+2026-03-06 22:46:11 - ERROR - Error at skip=22700: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=22700
+2026-03-06 22:46:11 - ERROR - Error at skip=22800: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=22800
+2026-03-06 22:46:11 - ERROR - Error at skip=22900: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=22900
+2026-03-06 22:46:11 - ERROR - Error at skip=23000: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=23000
+2026-03-06 22:46:11 - ERROR - Error at skip=23100: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=23100
+2026-03-06 22:46:11 - ERROR - Error at skip=23200: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=23200
+2026-03-06 22:46:11 - ERROR - Error at skip=23400: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=23400
+2026-03-06 22:46:11 - ERROR - Error at skip=23300: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=23300
+2026-03-06 22:46:12 - ERROR - Error at skip=23600: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=23600
+2026-03-06 22:46:12 - ERROR - Error at skip=23500: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=23500
+2026-03-06 22:46:12 - ERROR - Error at skip=23700: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=23700
+2026-03-06 22:46:12 - ERROR - Error at skip=23800: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=23800
+2026-03-06 22:46:12 - ERROR - Error at skip=23900: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=23900
+2026-03-06 22:46:12 - ERROR - Error at skip=24000: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=24000
+2026-03-06 22:46:12 - ERROR - Error at skip=24100: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=24100
+2026-03-06 22:46:12 - ERROR - Error at skip=24200: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=24200
+2026-03-06 22:46:13 - ERROR - Error at skip=24300: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=24300
+2026-03-06 22:46:13 - ERROR - Error at skip=24400: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=24400
+2026-03-06 22:46:13 - ERROR - Error at skip=24500: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=24500
+2026-03-06 22:46:13 - ERROR - Error at skip=24600: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=24600
+2026-03-06 22:46:13 - ERROR - Error at skip=24700: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=24700
+2026-03-06 22:46:13 - ERROR - Error at skip=24800: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=24800
+2026-03-06 22:46:14 - ERROR - Error at skip=24900: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=24900
+2026-03-06 22:46:14 - ERROR - Error at skip=25000: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=25000
+2026-03-06 22:46:14 - ERROR - Error at skip=25100: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=25100
+2026-03-06 22:46:14 - ERROR - Error at skip=25200: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=25200
+2026-03-06 22:46:14 - ERROR - Error at skip=25300: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=25300
+2026-03-06 22:46:14 - ERROR - Error at skip=25500: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=25500
+2026-03-06 22:46:14 - ERROR - Error at skip=25400: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=25400
+2026-03-06 22:46:14 - ERROR - Error at skip=25600: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=25600
+2026-03-06 22:46:14 - ERROR - Error at skip=25700: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=25700
+2026-03-06 22:46:15 - ERROR - Error at skip=25800: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=25800
+2026-03-06 22:46:15 - ERROR - Error at skip=25900: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=25900
+2026-03-06 22:46:15 - ERROR - Error at skip=26000: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=26000
+2026-03-06 22:46:15 - ERROR - Error at skip=26100: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=26100
+2026-03-06 22:46:15 - ERROR - Error at skip=26200: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=26200
+2026-03-06 22:46:15 - ERROR - Error at skip=26300: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=26300
+2026-03-06 22:46:16 - ERROR - Error at skip=26400: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=26400
+2026-03-06 22:46:16 - ERROR - Error at skip=26500: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=26500
+2026-03-06 22:46:16 - ERROR - Error at skip=26700: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=26700
+2026-03-06 22:46:16 - ERROR - Error at skip=26600: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=26600
+2026-03-06 22:46:16 - ERROR - Error at skip=26800: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=26800
+2026-03-06 22:46:16 - ERROR - Error at skip=26900: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=26900
+2026-03-06 22:46:16 - ERROR - Error at skip=27000: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=27000
+2026-03-06 22:46:16 - ERROR - Error at skip=27100: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=27100
+2026-03-06 22:46:16 - ERROR - Error at skip=27200: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=27200
+2026-03-06 22:46:17 - ERROR - Error at skip=27300: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=27300
+2026-03-06 22:46:17 - ERROR - Error at skip=27400: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=27400
+2026-03-06 22:46:17 - ERROR - Error at skip=27500: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=27500
+2026-03-06 22:46:17 - ERROR - Error at skip=27600: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=27600
+2026-03-06 22:46:17 - ERROR - Error at skip=27700: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=27700
+2026-03-06 22:46:17 - ERROR - Error at skip=27800: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=27800
+2026-03-06 22:46:17 - ERROR - Error at skip=27900: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=27900
+2026-03-06 22:46:18 - ERROR - Error at skip=28000: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=28000
+2026-03-06 22:46:18 - ERROR - Error at skip=28100: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=28100
+2026-03-06 22:46:18 - ERROR - Error at skip=28200: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=28200
+2026-03-06 22:46:18 - ERROR - Error at skip=28300: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=28300
+2026-03-06 22:46:18 - ERROR - Error at skip=28400: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=28400
+2026-03-06 22:46:18 - ERROR - Error at skip=28500: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=28500
+2026-03-06 22:46:18 - ERROR - Error at skip=28600: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=28600
+2026-03-06 22:46:19 - ERROR - Error at skip=28700: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=28700
+2026-03-06 22:46:19 - ERROR - Error at skip=28800: HTTPError - 429 Client Error: Too Many Requests for url: https://api.fda.gov/drug/drugsfda.json?limit=100&skip=28800
+2026-03-06 22:46:19 - INFO - Total fetched: 19400/28900
+2026-03-06 22:46:19 - INFO - Built bronze_df with shape: (19400, 10)
+2026-03-06 22:46:19 - INFO - Loaded 19400 records into bronze.raw_fda_approvals
+2026-03-06 22:46:19 - INFO - Done.
