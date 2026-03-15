@@ -9,7 +9,7 @@ from pathlib import Path
 from sqlalchemy import create_engine
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv(Path(__file__).parent.parent / '.env')
 
 # ── logging setup ──────────────────────────────────────────
 BASE_DIR = Path(__file__).parent.parent

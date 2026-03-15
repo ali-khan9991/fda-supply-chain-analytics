@@ -9,6 +9,8 @@ wheels/
 # Virtual environments
 .venv
 .env
+FDA_Pipeline/profiles.yml
+
 
 # Jupyter checkpoints
 .ipynb_checkpoints/
@@ -19,3 +21,6 @@ data/raw/
 # OS files
 .DS_Store
 Thumbs.db
+
+airflow/logs/
+airflow/plugins/
