@@ -7,6 +7,7 @@ from datetime import datetime
 from pathlib import Path
 from sqlalchemy import create_engine
 from dotenv import load_dotenv
+from urllib.parse import quote_plus
 
 load_dotenv(Path(__file__).parent.parent / '.env')
 
@@ -38,9 +39,17 @@ logger.addHandler(file_handler)
 # ── config ──────────────────────────────────────────
 BASE_URL = os.getenv("FDA_BASE_URL")
 DB_URL = (
-    f"postgresql://{os.getenv('DB_USER')}:{os.getenv('DB_PASSWORD')}"
+    f"postgresql://{os.getenv('DB_USER')}:{quote_plus(os.getenv('DB_PASSWORD'))}"
     f"@{os.getenv('DB_HOST')}:{os.getenv('DB_PORT')}/{os.getenv('DB_NAME')}"
 )
+
+print(f"Connecting to: {os.getenv('DB_HOST')}")
+print(f"DB_URL: {DB_URL}")
+print(f"FDA_BASE_URL: {BASE_URL}")
+print(f"FDA_API_KEY: {os.getenv('FDA_API_KEY')}")
+print(f"DB_USER: {os.getenv('DB_USER')}")
+print(f"DB_PASSWORD: {os.getenv('DB_PASSWORD')}")
+
 #() is for multi-line string concatenation, not for function calls. The original code had an extra set of parentheses around the f-string which is unnecessary and can be removed for clarity.
 BRONZE_COLUMNS = [
     "package_ndc", "generic_name", "company_name", "dosage_form",

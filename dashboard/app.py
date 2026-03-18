@@ -4,15 +4,17 @@ from sqlalchemy import create_engine
 from dotenv import load_dotenv
 from pathlib import Path
 import os
+from urllib.parse import quote_plus
 
 # load environment variables
 load_dotenv(Path(__file__).parent.parent / '.env')
 
 # database connection
 DB_URL = (
-    f"postgresql://{os.getenv('DB_USER')}:{os.getenv('DB_PASSWORD')}"
+    f"postgresql://{os.getenv('DB_USER')}:{quote_plus(os.getenv('DB_PASSWORD'))}"
     f"@{os.getenv('DB_HOST')}:{os.getenv('DB_PORT')}/{os.getenv('DB_NAME')}"
 )
+
 
 @st.cache_data
 def load_data(query):

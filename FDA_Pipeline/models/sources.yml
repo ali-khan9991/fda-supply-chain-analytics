@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: bronze
-    database: pharma_db
+    database: postgres
     schema: bronze
     tables:
       - name: raw_fda_shortages
