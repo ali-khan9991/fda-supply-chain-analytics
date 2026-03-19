@@ -21,7 +21,9 @@ jobs:
       - name: Install dependencies
         run: |
           pip install uv
-          uv sync
+          uv sync --no-dev
+          pip install requests pandas sqlalchemy psycopg2-binary python-dotenv pydantic
+
 
       - name: Run ingestion scripts
         env:
