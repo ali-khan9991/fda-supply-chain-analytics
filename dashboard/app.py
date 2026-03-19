@@ -10,10 +10,18 @@ from urllib.parse import quote_plus
 load_dotenv(Path(__file__).parent.parent / '.env')
 
 # database connection
-DB_URL = (
-    f"postgresql://{os.getenv('DB_USER')}:{quote_plus(os.getenv('DB_PASSWORD'))}"
-    f"@{os.getenv('DB_HOST')}:{os.getenv('DB_PORT')}/{os.getenv('DB_NAME')}"
-)
+if hasattr(st, 'secrets') and 'DB_HOST' in st.secrets:
+    DB_URL = (
+        f"postgresql://{st.secrets['DB_USER']}:{quote_plus(st.secrets['DB_PASSWORD'])}"
+        f"@{st.secrets['DB_HOST']}:{st.secrets['DB_PORT']}/{st.secrets['DB_NAME']}"
+    )
+else:
+    load_dotenv(Path(__file__).parent.parent / '.env')
+    DB_URL = (
+        f"postgresql://{os.getenv('DB_USER')}:{quote_plus(os.getenv('DB_PASSWORD'))}"
+        f"@{os.getenv('DB_HOST')}:{os.getenv('DB_PORT')}/{os.getenv('DB_NAME')}"
+    )
+
 
 
 @st.cache_data
