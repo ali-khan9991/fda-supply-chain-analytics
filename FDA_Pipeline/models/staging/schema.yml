@@ -42,7 +42,7 @@ models:
       - name: classification
         tests:
           - accepted_values:
-              values: ['Class I', 'Class II', 'Class III']
+              values: ['Class I', 'Class II', 'Class III','Not Yet Classified']
 
   - name: stg_recall_manufacturers
     description: "Exploded manufacturer names per recall"

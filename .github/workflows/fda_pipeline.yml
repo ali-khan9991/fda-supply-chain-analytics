@@ -11,17 +11,19 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
       - name: Install dependencies
         run: |
           pip install uv
-          uv sync
+          uv sync --no-dev
+          pip install requests pandas sqlalchemy psycopg2-binary python-dotenv pydantic dbt-core dbt-postgres
+
 
       - name: Run ingestion scripts
         env:
@@ -45,6 +47,20 @@ jobs:
           DB_USER: ${{ secrets.DB_USER }}
           DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
         run: |
+          cat > FDA_Pipeline/profiles.yml << EOF
+          FDA_Pipeline:
+            target: dev
+            outputs:
+              dev:
+                type: postgres
+                host: $DB_HOST
+                port: $DB_PORT
+                user: $DB_USER
+                password: $DB_PASSWORD
+                dbname: $DB_NAME
+                schema: silver
+                threads: 4
+          EOF
           cd FDA_Pipeline
-          uv run dbt run --profiles-dir .
-          uv run dbt test --profiles-dir .
+          dbt run --profiles-dir .
+          dbt test --profiles-dir .
