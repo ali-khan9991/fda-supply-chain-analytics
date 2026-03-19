@@ -48,5 +48,5 @@ jobs:
           DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
         run: |
           cd FDA_Pipeline
-          uv run dbt run --profiles-dir .
-          uv run dbt test --profiles-dir .
+          dbt run --profiles-dir .
+          dbt test --profiles-dir .
