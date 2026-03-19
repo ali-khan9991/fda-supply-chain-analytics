@@ -22,7 +22,7 @@ jobs:
         run: |
           pip install uv
           uv sync --no-dev
-          pip install requests pandas sqlalchemy psycopg2-binary python-dotenv pydantic
+          pip install requests pandas sqlalchemy psycopg2-binary python-dotenv pydantic dbt-core dbt-postgres
 
 
       - name: Run ingestion scripts
