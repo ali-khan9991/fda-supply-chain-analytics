@@ -47,6 +47,20 @@ jobs:
           DB_USER: ${{ secrets.DB_USER }}
           DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
         run: |
+          cat > FDA_Pipeline/profiles.yml << EOF
+          FDA_Pipeline:
+            target: dev
+            outputs:
+              dev:
+                type: postgres
+                host: $DB_HOST
+                port: $DB_PORT
+                user: $DB_USER
+                password: $DB_PASSWORD
+                dbname: $DB_NAME
+                schema: silver
+                threads: 4
+          EOF
           cd FDA_Pipeline
           dbt run --profiles-dir .
           dbt test --profiles-dir .
