@@ -1,0 +1,82 @@
+version: 2
+
+models:
+  - name: stg_shortages
+    description: "Cleaned FDA drug shortage records"
+    columns:
+      - name: package_ndc
+        description: "Primary key - unique drug package identifier"
+        tests:
+          - unique
+          - not_null
+      - name: status
+        tests:
+          - accepted_values:
+              values: ['Current', 'Resolved', 'To Be Discontinued']
+      - name: shortage_days
+        tests:
+          - not_null
+
+  - name: stg_shortage_manufacturers
+    description: "Exploded manufacturer names per shortage"
+    columns:
+      - name: package_ndc
+        tests:
+          - not_null
+
+  - name: stg_shortage_substances
+    description: "Exploded substance names per shortage"
+    columns:
+      - name: package_ndc
+        tests:
+          - not_null
+
+  - name: stg_recalls
+    description: "Cleaned FDA drug recall records"
+    columns:
+      - name: recall_number
+        description: "Primary key - unique recall identifier"
+        tests:
+          - unique
+          - not_null
+      - name: classification
+        tests:
+          - accepted_values:
+              values: ['Class I', 'Class II', 'Class III','Not Yet Classified']
+
+  - name: stg_recall_manufacturers
+    description: "Exploded manufacturer names per recall"
+    columns:
+      - name: recall_number
+        tests:
+          - not_null
+
+  - name: stg_recall_substances
+    description: "Exploded substance names per recall"
+    columns:
+      - name: recall_number
+        tests:
+          - not_null
+
+  - name: stg_approvals
+    description: "Cleaned FDA drug approval records"
+    columns:
+      - name: application_number
+        description: "Primary key - unique approval identifier"
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_approval_manufacturers
+    description: "Exploded manufacturer names per approval"
+    columns:
+      - name: application_number
+        tests:
+          - not_null
+
+  - name: stg_approval_substances
+    description: "Exploded substance names per approval"
+    columns:
+      - name: application_number
+        tests:
+          - not_null

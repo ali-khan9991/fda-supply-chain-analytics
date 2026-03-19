@@ -7,15 +7,16 @@ from datetime import datetime
 from pathlib import Path
 from sqlalchemy import create_engine
 from dotenv import load_dotenv
+from urllib.parse import quote_plus
 
-load_dotenv()
+load_dotenv(Path(__file__).parent.parent / '.env')
 
 # ── logging setup ──────────────────────────────────────────
 BASE_DIR = Path(__file__).parent.parent
 LOG_DIR = BASE_DIR / "logs"
 LOG_DIR.mkdir(exist_ok=True)
 
-log_filename = LOG_DIR / f"fda_shortages_{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.log"
+log_filename = LOG_DIR / f"fda_shortages_{datetime.now().strftime('%Y-%m-%d')}.log"
 
 formatter = logging.Formatter(
     fmt="{asctime} - {levelname} - {message}",
@@ -38,10 +39,18 @@ logger.addHandler(file_handler)
 # ── config ──────────────────────────────────────────
 BASE_URL = os.getenv("FDA_BASE_URL")
 DB_URL = (
-    f"postgresql://{os.getenv('DB_USER')}:{os.getenv('DB_PASSWORD')}"
+    f"postgresql://{os.getenv('DB_USER')}:{quote_plus(os.getenv('DB_PASSWORD'))}"
     f"@{os.getenv('DB_HOST')}:{os.getenv('DB_PORT')}/{os.getenv('DB_NAME')}"
 )
 
+print(f"Connecting to: {os.getenv('DB_HOST')}")
+print(f"DB_URL: {DB_URL}")
+print(f"FDA_BASE_URL: {BASE_URL}")
+print(f"FDA_API_KEY: {os.getenv('FDA_API_KEY')}")
+print(f"DB_USER: {os.getenv('DB_USER')}")
+print(f"DB_PASSWORD: {os.getenv('DB_PASSWORD')}")
+
+#() is for multi-line string concatenation, not for function calls. The original code had an extra set of parentheses around the f-string which is unnecessary and can be removed for clarity.
 BRONZE_COLUMNS = [
     "package_ndc", "generic_name", "company_name", "dosage_form",
     "presentation", "status", "availability", "update_type",
@@ -68,8 +77,8 @@ def fetch_all_shortages():
         try:
             response = requests.get(
                 f"{BASE_URL}/shortages.json",
-                params={"limit": 100, "skip": skip},
-                timeout=10
+                params={"limit": 100, "skip": skip, "api_key": os.getenv("FDA_API_KEY")},
+                timeout=10,
             )
             response.raise_for_status()
             data = response.json()
@@ -122,6 +131,13 @@ def load_to_bronze(bronze_df):
     )
 
     logger.info(f"Loaded {len(bronze_df)} records into bronze.raw_fda_shortages")
+
+def fda_shortages():
+    logger.info("Starting FDA shortages ingestion...")
+    results = fetch_all_shortages()
+    bronze_df = build_bronze_df(results)
+    load_to_bronze(bronze_df)
+    logger.info("Done.")
 
 # ── main ──────────────────────────────────────────
 if __name__ == "__main__":

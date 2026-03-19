@@ -1,0 +1,66 @@
+name: FDA Supply Chain Pipeline
+
+on:
+  schedule:
+    - cron: '0 6 * * *'    # daily at 6am UTC
+  workflow_dispatch:         # manual trigger button
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          pip install uv
+          uv sync --no-dev
+          pip install requests pandas sqlalchemy psycopg2-binary python-dotenv pydantic dbt-core dbt-postgres
+
+
+      - name: Run ingestion scripts
+        env:
+          FDA_BASE_URL: ${{ secrets.FDA_BASE_URL }}
+          FDA_API_KEY: ${{ secrets.FDA_API_KEY }}
+          DB_HOST: ${{ secrets.DB_HOST }}
+          DB_PORT: ${{ secrets.DB_PORT }}
+          DB_NAME: ${{ secrets.DB_NAME }}
+          DB_USER: ${{ secrets.DB_USER }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+        run: |
+          python ingestion/fda_shortages.py
+          python ingestion/fda_recalls.py
+          python ingestion/fda_approvals.py
+
+      - name: Run dbt
+        env:
+          DB_HOST: ${{ secrets.DB_HOST }}
+          DB_PORT: ${{ secrets.DB_PORT }}
+          DB_NAME: ${{ secrets.DB_NAME }}
+          DB_USER: ${{ secrets.DB_USER }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+        run: |
+          cat > FDA_Pipeline/profiles.yml << EOF
+          FDA_Pipeline:
+            target: dev
+            outputs:
+              dev:
+                type: postgres
+                host: $DB_HOST
+                port: $DB_PORT
+                user: $DB_USER
+                password: $DB_PASSWORD
+                dbname: $DB_NAME
+                schema: silver
+                threads: 4
+          EOF
+          cd FDA_Pipeline
+          dbt run --profiles-dir .
+          dbt test --profiles-dir .
