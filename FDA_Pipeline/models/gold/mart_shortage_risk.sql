@@ -63,5 +63,26 @@ combined AS (
     LEFT JOIN manufacturer_risk mr ON sb.package_ndc = mr.package_ndc
     LEFT JOIN alternatives_count ac ON sb.package_ndc = ac.package_ndc
 )
-SELECT * FROM combined
+SELECT
+    package_ndc,
+    generic_name,
+    brand_name,
+    route,
+    status,
+    availability,
+    shortage_reason,
+    shortage_days,
+    initial_posting_date,
+    last_updated_date,
+    manufacturer_risk_score,
+    manufacturer_risk_level,
+    alternatives_available,
+    shortage_risk_score,
+    CASE
+        WHEN shortage_risk_score >= 7 THEN 'Critical'
+        WHEN shortage_risk_score >= 5 THEN 'High'
+        WHEN shortage_risk_score >= 3 THEN 'Medium'
+        ELSE 'Low'
+    END AS shortage_risk_level
+FROM combined
 ORDER BY shortage_risk_score DESC

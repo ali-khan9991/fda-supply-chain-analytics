@@ -8,6 +8,7 @@ from datetime import datetime
 from pathlib import Path
 from sqlalchemy import create_engine
 from dotenv import load_dotenv
+from urllib.parse import quote_plus
 
 load_dotenv(Path(__file__).parent.parent / '.env')
 
@@ -39,9 +40,10 @@ logger.addHandler(file_handler)
 # ── config ──────────────────────────────────────────
 BASE_URL = os.getenv("FDA_BASE_URL")
 DB_URL = (
-    f"postgresql://{os.getenv('DB_USER')}:{os.getenv('DB_PASSWORD')}"
+    f"postgresql://{os.getenv('DB_USER')}:{quote_plus(os.getenv('DB_PASSWORD'))}"
     f"@{os.getenv('DB_HOST')}:{os.getenv('DB_PORT')}/{os.getenv('DB_NAME')}"
 )
+
 
 BRONZE_COLUMNS = [
     "recall_number",
